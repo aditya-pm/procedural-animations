@@ -11,7 +11,7 @@ int main() {
         ClearBackground(BLACK);
 
         chain.update();
-        chain.draw();
+        chain.draw2();
 
         EndDrawing();
     }

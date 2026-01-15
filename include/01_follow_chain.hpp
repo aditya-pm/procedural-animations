@@ -18,4 +18,5 @@ class Chain {
 
     void update();
     void draw();
+    void draw2();
 };
