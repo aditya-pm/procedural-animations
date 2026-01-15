@@ -31,14 +31,15 @@ int main() {
 
             float direction_length = sqrtf(direction.x * direction.x + direction.y * direction.y);
 
+            // if curr = prev, dir_len = 0, and / 0 = U.B
             if (direction_length > 0.0001f) {
                 direction.x /= direction_length;
                 direction.y /= direction_length;
             }
 
             joints[i] = {
-                prev_joint.x += direction.x * JOINTS_GAP,
-                prev_joint.y += direction.y * JOINTS_GAP};
+                prev_joint.x + direction.x * JOINTS_GAP,
+                prev_joint.y + direction.y * JOINTS_GAP};
         }
 
         BeginDrawing();
